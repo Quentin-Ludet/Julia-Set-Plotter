@@ -61,9 +61,6 @@ class complex_number:
         return complex_number(np.sin(num.r) * np.cosh(num.i), np.cos(num.r) * np.sinh(num.i))
 
 
-# max iterations
-
-
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib import cm
@@ -126,7 +123,7 @@ def make_image(c, Y):
 # Use PIL to create an image from the new array of pixels
 def generate_file(img, C):
     new_image = Image.fromarray(img)
-    fname = f'./julia/multiprocessed/{C[0]}+{C[1]}i.png'
+    fname = f'./graphs/{C[0]}+{C[1]}i.png'
     open(fname, 'w').close()
     new_image.save(fname)
 
